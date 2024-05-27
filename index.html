@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+   
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#expenseList {
+    margin-top: 20px;
+}
+
+.expense {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.expense span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.expense button {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.expense button:hover {
+    background-color: #e0a800;
+}
+
+#totalExpense {
+    font-weight: bold;
+    margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expenseForm">
+            <input type="date" id="dateInput" required>
+            <input type="number" id="amountInput" placeholder="Amount" required>
+            <input type="text" id="descriptionInput" placeholder="Description" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        <div id="expenseList">
+            <!-- Display expenses here -->
+        </div>
+        <div id="totalExpense"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
